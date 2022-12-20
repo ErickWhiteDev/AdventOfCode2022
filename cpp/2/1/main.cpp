@@ -13,54 +13,47 @@ int main() {
 
     string line;
 
-    string choices[2];
-
     int count = 0;
 
     while (getline(input, line)) {
-        choices[0] = line[0]; // Player 1
-        choices [1] = line[2]; // Player 2
-
         // Handle rock-paper-scissors cases
         switch(line[2]) {
             case 'X':
+                count += 1;
                switch(line[0]) {
                    case 'A':
                        count += 3;
                        break;
                    case 'B':
-                       count += 1;
                        break;
                    case 'C':
-                       count += 2;
+                       count += 6;
                        break;
                }
                break;
             case 'Y':
-                count += 3;
+                count += 2;
                 switch(line[0]) {
                     case 'A':
-                        count += 1;
+                        count += 6;
                         break;
                     case 'B':
-                        count += 2;
+                        count += 3;
                         break;
                     case 'C':
-                        count += 3;
                         break;
                 }
                 break;
             case 'Z':
-                count += 6;
+                count += 3;
                 switch(line[0]) {
                     case 'A':
-                        count += 2;
                         break;
                     case 'B':
-                        count += 3;
+                        count += 6;
                         break;
                     case 'C':
-                        count += 1;
+                        count += 3;
                         break;
                 }
                 break;
